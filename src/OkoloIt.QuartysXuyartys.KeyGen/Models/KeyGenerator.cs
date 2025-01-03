@@ -10,7 +10,7 @@ internal class KeyGenerator
     private const int Divisor   = 7;
     private const int KeyLength = 16;
 
-    private char[] KeyChars = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
+    private readonly char[] KeyChars = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
 
     internal string Generate(string firstHexKey)
     {
