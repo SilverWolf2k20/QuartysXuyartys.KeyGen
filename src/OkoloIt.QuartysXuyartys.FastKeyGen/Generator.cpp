@@ -16,11 +16,11 @@ std::wstring Generator::GenerateActivateCode(const std::wstring& rawInstallCode)
     std::uniform_int_distribution<int> distrib{ 0, static_cast<int>(m_keyChars.size() - 1)};
 
     for (auto i = 0; i < m_keyLength; ++i) {
-        // Установка пустого символа для разделения по группам по 4 символа.
+        // Setting a blank character to be divided into groups of 4 characters.
         if (i % 4 == 0 && i > 0)
             stream << ' ';
 
-        // Установка символа ключа на первую позицию группы и символа заполнения на остальные.
+        // Sets the key symbol to the first position of the group and the fill character to the remaining positions.
         if (i % 4 == 0) {
             int index = i / 4;
             stream << rawActivateHexCode[index];
