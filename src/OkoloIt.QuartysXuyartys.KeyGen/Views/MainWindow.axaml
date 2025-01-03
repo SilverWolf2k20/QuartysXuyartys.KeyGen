@@ -8,13 +8,26 @@
         d:DesignHeight="450"
         x:Class="OkoloIt.QuartysXuyartys.KeyGen.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
-        Icon="/Assets/avalonia-logo.ico"
-        Title="QuartysXuyartys.KeyGen">
+        Icon="/Assets/qx.ico"
+        SizeToContent="WidthAndHeight"
+        CanResize="False"
+        Title="Qx2 KeyGen">
 
     <Design.DataContext>
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
-               Text="{Binding Message}" />
+    <StackPanel Margin="10" Width="250" Spacing="10">
+        <TextBlock Text="Код установки:"/>
+        <TextBox MaxLength="10"/>
+
+        <TextBlock Text="Код активации:"/>
+        <TextBox IsReadOnly="True"/>
+
+        <StackPanel HorizontalAlignment="Center"
+                    Spacing="10" Orientation="Horizontal">
+            <Button Content="Генерировать" Width="120"  HorizontalContentAlignment="Center"/>
+            <Button Content="Выход" Width="120" HorizontalContentAlignment="Center"/>
+        </StackPanel>
+    </StackPanel>
 </Window>
