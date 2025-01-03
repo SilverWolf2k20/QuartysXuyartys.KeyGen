@@ -19,15 +19,19 @@
 
     <StackPanel Margin="10" Width="250" Spacing="10">
         <TextBlock Text="Код установки:"/>
-        <TextBox MaxLength="10"/>
+        <TextBox MaxLength="10" Text="{Binding InstallationCode}"/>
 
         <TextBlock Text="Код активации:"/>
-        <TextBox IsReadOnly="True"/>
+        <TextBox IsReadOnly="True" Text="{Binding ActivationCode}"/>
 
         <StackPanel HorizontalAlignment="Center"
                     Spacing="10" Orientation="Horizontal">
-            <Button Content="Генерировать" Width="120"  HorizontalContentAlignment="Center"/>
-            <Button Content="Выход" Width="120" HorizontalContentAlignment="Center"/>
+            <Button Content="Генерировать"
+                    Width="120"  HorizontalContentAlignment="Center"
+                    Command="{Binding GenerateCommand}"/>
+            <Button Content="Выход"
+                    Width="120" HorizontalContentAlignment="Center"
+                    Command="{Binding ExitCommand}"/>
         </StackPanel>
     </StackPanel>
 </Window>
